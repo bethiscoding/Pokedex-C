@@ -50,7 +50,7 @@
     NSString *spritePath = topLevelDictionary[@"sprites"][@"front_shiny"]; // accessing on one line of code
     
     
-    return self initWithPokemonName:name identifier:identifier abilities:abilities spritePath:spritePath
+    return [self initWithPokemonName:name identifier:identifier abilities:abilities spritePath:spritePath];
 }
 
 @end

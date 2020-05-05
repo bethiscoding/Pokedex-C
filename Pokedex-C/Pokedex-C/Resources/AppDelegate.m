@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BRMPokemonController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [BRMPokemonController fetchPokemonForSearchTerm:@"12" completion:^(BRMPokemon * _Nonnull pokemon) {
+        NSLog(@"%@", pokemon.name);
+    }];
     return YES;
 }
 
